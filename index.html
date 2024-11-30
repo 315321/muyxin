@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style>
+            html,body{
+                height: 100%;
+                width: 100%;
+            }
+            body{
+                background-color:rgb(185, 244, 96);
+                align-items: center;
+                justify-content: center;
+                display: flex;
+                flex-direction: row;
+              
+            }
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            .box{
+                width: 100px;
+                height: 100px;
+                background-color: red;
+                position: relative;
+                transform: rotate(45deg);
+                animation: zhangjiaju 3s linear 0s infinite;
+              
+               
+
+            }
+            .box::before{
+                content: "";
+                width: 100px;
+                height: 50px;
+                background-color:red;
+                position: absolute;
+                top: -49px;
+                border-radius: 100px 100px 0 0;
+                
+            }
+            .box::after{
+                content: "";
+                width: 50px;
+                height: 100px;
+                background-color:red;
+                position: absolute;
+                left: -49px;
+                border-radius:100px  0px 0px 100px ;
+               
+                
+            }
+            @keyframes zhangjiaju {
+                0%{
+                    transform: rotate(45deg) scale(0.6);
+
+
+
+                }
+                100%{
+                    transform: rotate(45deg)scale(1.6);
+                }
+                
+            }
+        </style>
+        <title>家驹</title>
+    </head>
+    <body>
+        <div class="box"></div>
+    </body>
+</html>
